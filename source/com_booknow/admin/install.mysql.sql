@@ -1,35 +1,30 @@
+CREATE TABLE IF NOT EXISTS `#__booknow_persons` (
+  `person_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `fk_calendar` varchar(255) DEFAULT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  `published` tinyint(2) DEFAULT 1,
+  `ordering` int(11) DEFAULT NULL,
+  PRIMARY KEY (`person_id`)
+);
+
 CREATE TABLE IF NOT EXISTS `#__booknow_services` (
   `service_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
-
-
-  `user_id` int(11) DEFAULT NULL,
-  `isbn` varchar(255) DEFAULT NULL,
-  `author` varchar(255) DEFAULT NULL,
-  `summary` text DEFAULT NULL,
-  `pages` varchar(55) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-
-  `publish_date` varchar(255) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `duration` int(11) DEFAULT NULL,
+  `unit` tinyint(3) DEFAULT NULL,
+  `price` decimal DEFAULT NULL,
+  `currency` tinyint(3) DEFAULT NULL,
+  `price_type` tinyint(3) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
-  `lent` tinyint(2) DEFAULT 0,
-  `lent_date` datetime DEFAULT NULL,
-  `due_date` datetime DEFAULT NULL,
-  `lent_uid` varchar(255) DEFAULT NULL,
-  `published` tinyint(2) DEFAULT 0,
-  PRIMARY KEY (`service_id`)
-);
-
-CREATE TABLE IF NOT EXISTS `#__booknow_libraries` (
-  `library_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
   `published` tinyint(2) DEFAULT 1,
-  `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL,
-  PRIMARY KEY (`library_id`)
+  `ordering` int(11) DEFAULT NULL,
+  PRIMARY KEY (`service_id`)
 );
 
 CREATE TABLE IF NOT EXISTS `#__booknow_waitlists` (
@@ -43,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `#__booknow_waitlists` (
   PRIMARY KEY (`waitlist_id`)
 );
 
-CREATE TABLE IF NOT EXISTS `#__lendr_wishlists` (
+CREATE TABLE IF NOT EXISTS `#__booknow_wishlists` (
   `wishlist_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `book_id` int(11) DEFAULT NULL,
@@ -53,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `#__lendr_wishlists` (
   PRIMARY KEY (`wishlist_id`)
 );
 
-CREATE TABLE IF NOT EXISTS `#__lendr_reviews` (
+CREATE TABLE IF NOT EXISTS `#__booknow_reviews` (
   `review_id` int(11) NOT NULL AUTO_INCREMENT,
   `book_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,

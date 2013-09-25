@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>COM_BOOKNOW</name>
+	<creationDate>2013-OCT</creationDate>
+	<author>Wolfgang</author>
+	<authorEmail>wolfgang.disch@gmx.de</authorEmail>
+	<authorUrl>http://dinovis.de</authorUrl>
+	<copyright>(C) 2013, Wolfgang Disch</copyright>
+	<version>0.9.0</version>
+	<description>COM_BOOKNOW_DESCRIPTION</description>
+
+	<install>
+  		<sql>
+    		<file charset="utf8" driver="mysql">install.mysql.sql</file>
+  		</sql>
+	</install>
+
+	<files folder="site">
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>languages</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>views</folder>
+		<filename>index.html</filename>
+		<filename>booknow.php</filename>
+		<filename>router.php</filename>
+	</files> 
+
+	<scriptfile>install.php</scriptfile>
+
+	<languages folder="site">
+		<language tag="en-GB">languages/en-GB/en-GB.com_booknow.ini</language>
+	</languages>
+
+	<administration>
+		<menu link="option=com_booknow" img="components/com_booknow/assets/images/booknow_icon.png">COM_BOOKNOW</menu>
+		<submenu>
+			<menu view="settings" img="components/com_booknow/assets/images/settings_icon.png"
+				alt="BOOKNOW/Settings">COM_BOOKNOW_SETTINGS</menu>
+		</submenu>
+
+		<files folder="admin">
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>languages</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>booknow.php</filename>
+			<filename>index.html</filename>
+			<filename>install.mysql.sql</filename>
+		</files>  
+
+		<languages folder="admin">
+			<language tag="en-GB">languages/en-GB/en-GB.com_booknow.ini</language>
+			<language tag="en-GB">languages/en-GB/en-GB.com_booknow.sys.ini</language>
+		</languages>
+
+	</administration>
+	
+</extension>
