@@ -6,7 +6,6 @@ class BookNowHelpersStyle
 {
 	function load()
 	{
-        //bbbb
 		$document = JFactory::getDocument();
 
 		//stylesheets

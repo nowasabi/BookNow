@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS `#__booknow_persons` (
-  `person_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `#__booknow_employees` (
+  `employee_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `fk_calendar` varchar(255) DEFAULT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `#__booknow_persons` (
   `modified` datetime NOT NULL,
   `published` tinyint(2) DEFAULT 1,
   `ordering` int(11) DEFAULT NULL,
-  PRIMARY KEY (`person_id`)
+  PRIMARY KEY (`employee_id`)
 );
 
 CREATE TABLE IF NOT EXISTS `#__booknow_services` (

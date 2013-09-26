@@ -8,6 +8,8 @@ class BookNowControllersDefault extends JControllerBase
     // Get the application
     $app = $this->getApplication();
 
+    // default = 0
+    // Austausch gegen Ist User admin?
     $params = JComponentHelper::getParams('com_booknow');
     if ($params->get('required_account') == 1) 
     {
@@ -20,8 +22,9 @@ class BookNowControllersDefault extends JControllerBase
  
     // Get the document object.
     $document     = JFactory::getDocument();
- 
-    $viewName     = $app->input->getWord('view', 'profile');
+
+    //  $viewName     = $app->input->getWord('view', 'profile');
+    $viewName     = $app->input->getWord('view', 'employee');
     $viewFormat   = $document->getType();
     $layoutName   = $app->input->getWord('layout', 'list');
 

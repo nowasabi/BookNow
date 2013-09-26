@@ -14,10 +14,10 @@ class BookNowModelsStatistics extends JModelBase
     //Retrieve Total Persons
     $query = $db->getQuery(true);
     $query->select('COUNT(*)')
-          ->from('#__booknow_persons')
+          ->from('#__booknow_employees')
           ->where('published = 1');
     $db->setQuery($query);
-    $stats['total_persons'] = $db->loadResult();
+    $stats['total_employees'] = $db->loadResult();
 
     //Retrieve Total Services
     $query = $db->getQuery(true);

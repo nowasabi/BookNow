@@ -2,14 +2,14 @@
     
 <div class="span4 thumbnail">
 <h3>
-	<span class="label label-info pull-right"><?php echo $this->stats['total_persons']; ?></span>
-	<?php echo JText::_(' COM_BOOKNOW_STATISTICS_TOTAL_PERSONS'); ?>
+	<span class="label label-info pull-right"><?php echo $this->stats['total_employees']; ?></span>
+	<?php echo JText::_(' COM_BOOKNOW_STATISTICS_TOTAL_EMPLOYEES'); ?>
 </h3>
     
 <div class="progress progress-success">
-  <div class="bar" style="width: <?php echo $this->stats['total_persons'] > 100 ? $this->stats['total_persons'] / 100 : $this->stats['total_persons']; ?>%"></div>
+  <div class="bar" style="width: <?php echo $this->stats['total_employees'] > 100 ? $this->stats['total_employees'] / 100 : $this->stats['total_employees']; ?>%"></div>
 </div>
-<p><?php echo JText::_(' COM_BOOKNOW_STATISTICS_TOTAL_PERSONS_DESC'); ?></p>
+<p><?php echo JText::_(' COM_BOOKNOW_STATISTICS_TOTAL_EMPLOYEES_DESC'); ?></p>
 </div>
     
 <div class="span4 thumbnail">
