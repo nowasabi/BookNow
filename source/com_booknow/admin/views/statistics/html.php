@@ -23,16 +23,18 @@ class BookNowViewsStatisticsHtml extends JViewHtml
      */
     protected function addToolbar()
     {
-        $canDo  = BookNowHelpersBookNow::getActions();
+        // TODO warum wird die Klasse nicht gefunden ?
+
+        //$canDo = BookNowHelpersBookNow::getActions();
 
         // Get the toolbar object instance
         $bar = JToolBar::getInstance('toolbar');
 
         JToolbarHelper::title(JText::_('COM_BOOKNOW_STATISTICS'));
                
-        if ($canDo->get('core.admin'))
-        {
+        //if ($canDo->get('core.admin'))
+        //{
             JToolbarHelper::preferences('com_booknow');
-        }
+        //}
     }
 }

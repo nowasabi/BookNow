@@ -2,7 +2,7 @@
 
 defined( '_JEXEC' ) or die( 'Restricted access' ); 
  
-class BookNowModelsBook extends BookNowModelsDefault
+class BookNowModelsEmployee extends BookNowModelsDefault
 {
 
   /**
