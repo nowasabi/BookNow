@@ -7,7 +7,7 @@ function addBook()
 	});
 
 	jQuery.ajax({
-		url:'index.php?option=com_lendr&controller=add&format=raw&tmpl=component',
+		url:'index.php?option=com_booknow&controller=add&format=raw&tmpl=component',
 		type:'POST',
 		data:bookInfo,
 		dataType:'JSON',
@@ -27,7 +27,7 @@ function addBook()
 function addToWishlist(book_id)
 {
 	jQuery.ajax({
-	url:'index.php?option=com_lendr&controller=wish&format=raw&tmpl=component',
+	url:'index.php?option=com_booknow&controller=wish&format=raw&tmpl=component',
 	type:'POST',
 	data:'&book_id='+book_id,
 	dataType:'JSON',
@@ -60,7 +60,7 @@ function addReview()
 	});
 
 	jQuery.ajax({
-		url:'index.php?option=com_lendr&controller=add&format=raw&tmpl=component',
+		url:'index.php?option=com_booknow&controller=add&format=raw&tmpl=component',
 		type:'POST',
 		data:reviewInfo,
 		dataType:'JSON',
@@ -94,7 +94,7 @@ function lendBook()
 	});
 	
 	jQuery.ajax({
-		url:'index.php?option=com_lendr&controller=lend&format=raw&tmpl=component',
+		url:'index.php?option=com_booknow&controller=lend&format=raw&tmpl=component',
 		type:'POST',
 		data:lendForm,
 		dataType:'JSON',
@@ -116,7 +116,7 @@ function borrowBook()
 	});
 	
 	jQuery.ajax({
-		url:'index.php?option=com_lendr&controller=request&format=raw&tmpl=component',
+		url:'index.php?option=com_booknow&controller=request&format=raw&tmpl=component',
 		type:'POST',
 		data:requestInfo,
 		dataType:'JSON',
@@ -154,7 +154,7 @@ function returnBook()
 	});
 
 	jQuery.ajax({
-		url:'index.php?option=com_lendr&controller=lend&format=raw&tmpl=component',
+		url:'index.php?option=com_booknow&controller=lend&format=raw&tmpl=component',
 		type:'POST',
 		data: postInfo,
 		dataType: 'JSON',
@@ -173,7 +173,7 @@ function returnBook()
 function cancelRequest(waitlist_id) 
 {
 	jQuery.ajax({
-		url:'index.php?option=com_lendr&controller=delete&format=raw&tmpl=component',
+		url:'index.php?option=com_booknow&controller=delete&format=raw&tmpl=component',
 		type:'POST',
 		data: 'waitlist_id='+waitlist_id,
 		dataType: 'JSON',
@@ -187,7 +187,7 @@ function cancelRequest(waitlist_id)
 function deleteBook(book_id,type) 
 {
 	jQuery.ajax({
-		url:'index.php?option=com_lendr&controller=delete&format=raw&tmpl=component',
+		url:'index.php?option=com_booknow&controller=delete&format=raw&tmpl=component',
 		type:'POST',
 		data: 'book_id='+book_id+'&type='+type,
 		dataType: 'JSON',

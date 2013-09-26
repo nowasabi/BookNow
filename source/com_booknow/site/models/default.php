@@ -2,7 +2,7 @@
 
 defined( '_JEXEC' ) or die( 'Restricted access' ); 
  
-class LendrModelsDefault extends JModelBase
+class BookNowModelsDefault extends JModelBase
 {
   protected $__state_set  = null;
   protected $_total       = null;

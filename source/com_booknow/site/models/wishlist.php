@@ -2,7 +2,7 @@
 
 defined( '_JEXEC' ) or die( 'Restricted access' ); 
  
-class LendrModelsWishlist extends LendrModelsDefault
+class BookNowModelsWishlist extends BookNowModelsDefault
 {
 
   /**

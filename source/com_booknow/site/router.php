@@ -1,13 +1,13 @@
 <?php // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' ); 
 
-function LendrBuildRoute(&$query)
+function BookNowBuildRoute(&$query)
 {
 	$segments = array();
 	return $segments;
 }
 
-function LendrParseRoute($segments) 
+function BookNowParseRoute($segments)
 {
 
 }

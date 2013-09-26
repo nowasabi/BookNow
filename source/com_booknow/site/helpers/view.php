@@ -2,7 +2,7 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-class LendrHelpersView
+class BookNowHelpersView
 {
 	function load($viewName, $layoutName='default', $viewFormat='html', $vars=null)
 	{
@@ -15,12 +15,12 @@ class LendrHelpersView
 	    $paths = new SplPriorityQueue;
 	    $paths->insert(JPATH_COMPONENT . '/views/' . strtolower($viewName) . '/tmpl', 'normal');
 	 
-	    $viewClass  = 'LendrViews' . ucfirst($viewName) . ucfirst($viewFormat);
-	    $modelClass = 'LendrModels' . ucfirst($viewName);
+	    $viewClass  = 'BookNowViews' . ucfirst($viewName) . ucfirst($viewFormat);
+	    $modelClass = 'BookNowModels' . ucfirst($viewName);
 
 	    if (false === class_exists($modelClass))
 	    {
-	      $modelClass = 'LendrModelsDefault';
+	      $modelClass = 'BookNowModelsDefault';
 	    }
 
 	    $view = new $viewClass(new $modelClass, $paths);
@@ -40,7 +40,7 @@ class LendrHelpersView
 
 	function getHtml($view, $layout, $item, $data)
 	{
-		$objectView = LendrHelpersView::load($view, $layout, 'phtml');
+		$objectView = BookNowHelpersView::load($view, $layout, 'phtml');
   		$objectView->$item = $data;
 
   		ob_start();

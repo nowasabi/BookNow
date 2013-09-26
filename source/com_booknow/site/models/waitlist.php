@@ -2,7 +2,7 @@
 
 defined( '_JEXEC' ) or die( 'Restricted access' ); 
  
-class LendrModelsWaitlist extends LendrModelsDefault
+class BookNowModelsWaitlist extends BookNowModelsDefault
 {
 
   //Define class level variables

@@ -2,7 +2,7 @@
 
 defined( '_JEXEC' ) or die( 'Restricted access' ); 
  
-class LendrModelsProfile extends LendrModelsDefault
+class BookNowModelsProfile extends BookNowModelsDefault
 {
 
   //Define class level variables

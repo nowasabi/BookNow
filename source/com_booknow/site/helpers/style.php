@@ -2,17 +2,18 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-class LendrHelpersStyle
+class BookNowHelpersStyle
 {
 	function load()
 	{
+        //bbbb
 		$document = JFactory::getDocument();
 
 		//stylesheets
-		$document->addStylesheet(JURI::base().'components/com_lendr/assets/css/style.css');
+		$document->addStylesheet(JURI::base().'components/com_booknow/assets/css/style.css');
 
 		//javascripts
-		$document->addScript(JURI::base().'components/com_lendr/assets/js/lendr.js');
+		$document->addScript(JURI::base().'components/com_booknow/assets/js/booknow.js');
 
 	}
 }
